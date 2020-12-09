@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Spiele</title>
+    <script src="wortliste.js"></script>
+    <script src="Galgenmaennchen.js"></script>
+    <style>
+        .left  {
+            float:left;
+            width: 30em;
+        }
+        .right  {
+            width: 810px;
+            margin-left: 31em;
+        }
+        #bildGalgen {
+            margin-left: -150px;
+        }
+        
+    </style>
+</head>
+<body onload="gesuchtesWortAktualisieren(geraten);">
+
+    <div class="left">
+        <h1>Galgenmännchen</h1>
+
+        <p>Bitte gib einen Buchstaben ein um das Wort zu erraten</p>
+
+        <label for="eingabe">Buchstaben</label>
+        <input type="text" name="eingabe" id="eingabe"></input>
+        <button type="button" onclick="pruefeEingabe(document.getElementById('eingabe').value);document.getElementById('eingabe').value = '';">Prüfen</button>
+
+        <h2>Das gesuchte Wort</h2>
+        <div id="gesuchtesWort"></div>
+    </div>
+    
+    <div class="right">
+        <h2>Der Galgen...</h2>
+        <img src="bilder/bild0.png" id="bildGalgen">
+    </div>
+
+</body>
+</html>
